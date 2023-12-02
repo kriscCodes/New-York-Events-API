@@ -49,7 +49,7 @@ def form():
 
 @app.route("/get-event/<event_name>", methods=["GET"])
 def get_event(event_name):
-    event_data = Events.query.get(event_name)
+    event_data = Events.query.filter_by(event_name=event_name).first()
     if event_data:
         return jsonify({"id": event_data.event_id, 
         "name": event_data.event_name,
