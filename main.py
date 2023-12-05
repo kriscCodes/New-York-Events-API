@@ -59,6 +59,19 @@ def get_event(event_name):
         "desc": event_data.event_desc,}), 200
     else:
        return "404 page not found", 404
+    
+@app.route("/get-event/<event_id>", methods=["GET"])
+def get_event_id(event_id):
+    event_data = Events.query.filter_by(event_name=id).first()
+    if event_data:
+        return jsonify({"id": event_data.event_id, 
+        "name": event_data.event_name,
+        "place": event_data.event_place,
+        "img": event_data.event_img_url,
+        "url": event_data.event_url,
+        "desc": event_data.event_desc,}), 200
+    else:
+       return "404 page not found", 404
 
 @app.route("/get-all-events", methods=["GET"])
 def get_all_events():
