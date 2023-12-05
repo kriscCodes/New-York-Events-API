@@ -62,7 +62,7 @@ def get_event(event_name):
     
 @app.route("/get-event/<event_id>", methods=["GET"])
 def get_event_id(event_id):
-    event_data = Events.query.filter_by(event_name=event_id).first()
+    event_data = Events.query.filter_by(event_id=event_id).first()
     if event_data:
         return jsonify({"id": event_data.event_id, 
         "name": event_data.event_name,
