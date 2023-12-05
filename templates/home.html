@@ -1,3 +1,68 @@
 {%extends "base.html"%}
 {%block title%}Home{%endblock%}
-{%block content%}{%endblock%}
+{%block content%}
+    <!-- <h1 class="display-1 text-center my-4 fs-1">New-York-Events API</h1>
+    <br>
+    <h2 class="display-2 my-4 fs-1">Base URL: https://intense-sands-73414-6ea2a84a5a5c.herokuapp.com/</h2>
+    <br>
+    <h2 class="display-2 my-4 fs-1">Requests</h2>
+    <p class="lead text-justify fw-normal">There are currently only 2 types of requests (Read / Create) for this API but more will be coming soon for full CRUD capability. You'll want to use the Base URL above for any of the requests below.</p>
+    <br>
+    <h4 class="display-3 my-4 fs-1">Get All Events:</h4>
+    <p class="lead fw-normal">Visit this url</p>
+    <br>
+    <h4 class="display-3 my-4 fs-1">Get Event by ID:</h4>
+    <p class="lead fw-normal">To see an event ID search for your event in the Get All Events url above. After finding your event you can visit   </p>
+    <br>
+    <h4 class="display-3 my-4 fs-1">Add an Event:</h4>
+    <p class="lead fw-normal">To add an event to this API simply visit the Forum section in the navbar on this page</p> -->
+    <div class="container mt-4">
+        <h1 class="text-center">New York Events API Documentation</h1>
+        
+        <section id="introduction">
+            <h2>Introduction</h2>
+            <p>This API provides information about various events happening in and around New York City. It allows users to create, view, and manage event details.</p>
+        </section>
+        
+         <section id="base-url">
+            <h2>Base URL</h2>
+            <p>The base URL is the root URL for all of the API's endpoints. All requests should start with this base URL:</p>
+            <p><strong>https://api.newyorkevents.com</strong></p>
+        </section>   
+
+        <section id="endpoints">
+            <h2>API Endpoints</h2>
+            
+            <div class="endpoint">
+                <h4>POST /form</h4>
+                <p>Use this endpoint to add a new event. The request should contain event details such as name, place, URL, image URL, and description.</p>
+            </div>
+
+            <div class="endpoint">
+                <h4>GET /get-all-events</h4>
+                <p>List all available events. This endpoint returns an array of all events with their details.</p>
+                <p><strong>Example Request: </strong><a href="https://intense-sands-73414-6ea2a84a5a5c.herokuapp.com/get-all-events">https://api.newyorkevents.com/get-event/get-all-events</a></p>
+            </div>
+            
+            <div class="endpoint">
+                <h4>GET /get-event/&lt;event_name&gt;</h4>
+                <p>Retrieve details of a specific event by providing the event name. This endpoint returns all relevant information about the event.</p>
+                <p><strong>Example Request: </strong><a href="https://intense-sands-73414-6ea2a84a5a5c.herokuapp.com/get-event/Fireworks">https://api.newyorkevents.com/get-event/Fireworks</a></p>
+            </div>
+            
+            <div class="endpoint">
+                <h4>GET /get-event/&lt;event_id&gt;</h4>
+                <p>Retrieve details of a specific event by providing the event id. This endpoint returns all relevant information about the event.</p>
+                <p><strong>Example Request: </strong><a href="https://intense-sands-73414-6ea2a84a5a5c.herokuapp.com/get-event/2">https://api.newyorkevents.com/get-event/2</a></p>
+            </div>
+
+        </section>
+
+        <section id="usage">
+            <h2>How to Use</h2>
+            <p>Send HTTP requests to the above endpoints with the required parameters to interact with the API. Ensure to handle responses in your client application.</p>
+        </section>
+    </div>
+
+
+{%endblock%}
