@@ -43,7 +43,7 @@ def form():
     event = Events(event_name = name, event_place = place, event_url=url, event_img_url=img, event_desc=desc )
     db.session.add(event)
     db.session.commit()
-    return redirect(url_for("views"))
+    return redirect(url_for("form"))
    else:
      return render_template("form.html")
 
