@@ -10,11 +10,13 @@ The New York Events API is a Flask-based application that serves as a platform f
 
 ## API Endpoints
 - `POST /form`: Add a new event.
-- `GET /get-event/<event_name>`: Retrieve details of a specific event.
 - `GET /get-all-events`: List all available events.
+- `GET /get-event-id/<id>`: Retrieve details of a specific event.
+- `GET /get-event/<event_name>`: Retrieve details of a specific event.
+
 
 ## How to Use
-- Access the documentation for creating and reading events, visit `http://localhost:5000/`.
+- Access the documentation for creating and reading events, visit `https://new-york-events-66105853a688.herokuapp.com/`.
 
 ## Future Plans
 - **More Endpoints**: There aren't as many endpoints as I would like due to time restraints but I will be adding more soon.
