@@ -19,7 +19,7 @@ The New York Events API is a Flask-based application that serves as a platform f
 ## Future Plans
 - **More Endpoints**: There aren't as many endpoints as I would like due to time restraints but I will be adding more soon.
 - **Put and Delete entries**: I want for entries to be updated and potentially deleted.
-- **Specificty**: Need the form to have specific requirements that way it's easier to use and interact with the data when consuming this API or adding any entry.
+- **Specificty**: I want the form to have specific requirements that way it's easier to use and interact with the data when consuming this API or adding any entry.
 
 ## Contributing
 Contributions to the New York Events API are welcome.

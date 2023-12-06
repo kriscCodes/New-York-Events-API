@@ -60,9 +60,10 @@ def get_event(event_name):
     else:
        return "404 page not found", 404
     
-@app.route("/get-event/<event_id>", methods=["GET"])
-def get_event_id(event_id):
-    event_data = Events.query.filter_by(event_id=event_id).first()
+@app.route("/get-event-id/<id>", methods=["GET"])
+def get_event_id(id):
+    eventID = id
+    event_data = Events.query.get(eventID)
     if event_data:
         return jsonify({"id": event_data.event_id, 
         "name": event_data.event_name,
