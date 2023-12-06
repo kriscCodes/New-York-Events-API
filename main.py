@@ -89,28 +89,6 @@ def get_all_events():
        return "404 page not found", 404
 
 
-def delete_ninth_event():
-    # Retrieve the ninth event
-    ninth_event = Events.query.get(9)
-
-    # Check if the ninth event exists
-    if ninth_event:
-        try:
-            # Delete the event
-            db.session.delete(ninth_event)
-            db.session.commit()
-            print("Ninth event deleted successfully.")
-        except Exception as e:
-            print(f"An error occurred: {e}")
-            db.session.rollback()
-    else:
-        print("Ninth event not found.");
-
-@app.route('/delete-ninth-event')
-def delete_ninth_event_route():
-    delete_ninth_event()
-    return "Ninth event deleted", 200
-
 
 
 if __name__ == "__main__":
